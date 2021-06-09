@@ -1,10 +1,3 @@
-/*						 *\
-   Assignment 2, CSP2104
-   Semester 1, 2021
-   Written by Ben Moon
-   Student ID: 10445994
-\*						 */
-
 #pragma once
 #include "Word.h"
 #include <vector>
@@ -20,7 +13,7 @@ using namespace std;
 class Dictionary
 {
 public:
-	void heading();
+	void heading(), trigramHeading(), guessingGameHeading();
 	void debug(string msg);
 	string lowerCase(string input);
 	void threeZ(string search), qNotU();

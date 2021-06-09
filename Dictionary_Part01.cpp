@@ -1,25 +1,50 @@
-/*						 *\
-   Assignment 2, CSP2104
-   Semester 1, 2021
-   Written by Ben Moon
-   Student ID: 10445994
-\*						 */
-
 #include "Dictionary_Part01.h"
 using namespace std;
 bool debugMessages = false;
 
-// Simple heading
 void Dictionary::heading()
 {
 	system("cls");
-	cout << "	######\n	#     # #  ####  ##### #  ####  #    #   ##   #####  #   #	\n	"
-		"#     # # #    #   #   # #    # ##   #  #  #  #    #  # #						\n	"
-		"#     # # #        #   # #    # # #  # #    # #    #   #						\n	"
-		"#     # # #        #   # #    # #  # # ###### #####    #						\n	"
-		"#     # # #    #   #   # #    # #   ## #    # #   #    #						\n	"
-		"######  #  ####    #   #  ####  #    # #    # #    #   #						\n\n";
+	cout <<
+		"	     _ _      _   _       _									\n"
+		"	    | (_)    | | (_)     (_)								\n"
+		"	  __| |_  ___| |_ _  ___  _ _ __   __ _ _ __ _   _			\n"
+		"	 / _` | |/ __| __| |/ _ \\| | '_ \\ / _` | '__| | | |		\n"
+		"	| (_| | | (__| |_| | (_) | | | | | (_| | |  | |_| |			\n"
+		"	 \\__,_|_|\\___|\\__|_|\\___/|_|_| |_|\\__,_|_|   \\__, |	\n"
+		"	                                              __/ |			\n"
+		"	                                             |___/			\n";
+
 }
+
+void Dictionary::trigramHeading()
+{
+	system("cls");
+	cout <<
+		"	 _        _										\n"
+		"	| |      (_)									\n"
+		"	| |_ _ __ _  __ _ _ __ __ _ _ __ ___  ___		\n"
+		"	| __| '__| |/ _` | '__/ _` | '_ ` _ \\/ __|		\n"
+		"	| |_| |  | | (_| | | | (_| | | | | | \\__ \\	\n"
+		"	 \\__|_|  |_|\\__, |_|  \\__,_|_| |_| |_|___/	\n"
+		"	             __/ |								\n"
+		"	            |___/								\n\n";
+}
+
+void Dictionary::guessingGameHeading()
+{
+	system("cls");
+	cout <<
+		"	                             _   _                                  _				\n"
+		"	                            | | | |                                | |				\n"
+		"	  __ _ _   _  ___  ___ ___  | |_| |__   ___  __      _____  _ __ __| |				\n"
+		"	 / _` | | | |/ _ \\/ __/ __| | __| '_ \\ / _ \\ \\ \\ /\\ / / _ \\| '__/ _` |		\n"
+		"	| (_| | |_| |  __/\\__ \\__ \\ | |_| | | |  __/  \\ V  V / (_) | | | (_| |			\n"
+		"	 \\__, |\\__,_|\\___||___/___/  \\__|_| |_|\\___|   \\_/\\_/ \\___/|_|  \\__,_|		\n"
+		"	  __/ |\n"
+		"	 |___/																				\n";
+}
+
 
 // Used for displaying a message when debugging points of code
 void Dictionary::debug(string msg)
@@ -78,8 +103,7 @@ string Dictionary::lowerCase(string input)
 	return input;
 }
 
-/* Basic Task 1
-	Search for a word within the Dictionary
+/* 	Search for a word within the Dictionary
 	Print the Word, Word Type and Definition(s) */
 void Dictionary::search(string keyword)
 {
@@ -99,8 +123,7 @@ void Dictionary::search(string keyword)
 		cout << ">> No word found" << endl;
 }
 
-/* Basic task 2
-	Display all words that have 3 Z's in total */
+/* 	Display all words that have 3 Z's in total */
 void Dictionary::threeZ(string keyword)
 {
 	int n = 1;
@@ -117,11 +140,10 @@ void Dictionary::threeZ(string keyword)
 		cout << ">> No words containing input strings were found." << endl;
 }
 
-/* Basic task 3
-	Display all words that have 3 Z's in total
+/* 	Display all words that have 3 Z's in total
 	*additional: Display all words that include the users input parameters */
 void Dictionary::qNotU()
-{																		// https://www.geeksforgeeks.org/string-find-in-cpp/
+{	
 	int n = 1;
 	bool success = false;
 	for (Word* i : dictionary)

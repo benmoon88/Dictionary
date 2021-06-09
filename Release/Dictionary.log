@@ -1,6 +1,25 @@
-﻿  Generating code
-  0 of 409 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+﻿  Dictionary_Part01.cpp
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Dictionary_Part01.cpp(99,20): warning C4018: '<=': signed/unsigned mismatch
+  Dictionary_Part02.cpp
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Dictionary_Part02.cpp(90,38): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Dictionary_Part02.cpp(126,23): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Dictionary_Part02.cpp(136,23): warning C4018: '<=': signed/unsigned mismatch
+  Main.cpp
+  Trigram.cpp
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(14,20): warning C4804: '<=': unsafe use of type 'bool' in operation
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(99,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(138,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(146,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(152,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(159,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(160,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(161,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(213,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Dictionary\Trigram.cpp(271,20): warning C4018: '<': signed/unsigned mismatch
+  Word.cpp
+  Generating code
+  0 of 415 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Dictionary.vcxproj -> C:\Users\benmo\Desktop\Dictionary\Release\Dictionary.exe
+  Dictionary.vcxproj -> C:\Users\benmo\Documents\Uni Stuff\OO with C++\Dictionary\Release\Dictionary.exe

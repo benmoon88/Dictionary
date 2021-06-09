@@ -1,1 +1,21 @@
-﻿  Dictionary.vcxproj -> C:\Users\benmo\Desktop\Dictionary\Debug\Dictionary.exe
+﻿  Main.cpp
+  Word.cpp
+  Trigram.cpp
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(21,20): warning C4804: '<=': unsafe use of type 'bool' in operation
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(106,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(145,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(153,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(159,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(166,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(167,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(168,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(221,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Trigram.cpp(279,20): warning C4018: '<': signed/unsigned mismatch
+  Dictionary_Part01.cpp
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Dictionary_Part01.cpp(74,20): warning C4018: '<=': signed/unsigned mismatch
+  Dictionary_Part02.cpp
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Dictionary_Part02.cpp(92,39): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Dictionary_Part02.cpp(129,23): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\benmo\Desktop\OO with C++\Dictionary\Dictionary\Dictionary_Part02.cpp(139,23): warning C4018: '<=': signed/unsigned mismatch
+  Generating Code...
+  Dictionary.vcxproj -> C:\Users\benmo\Desktop\OO with C++\Dictionary\Debug\Dictionary.exe

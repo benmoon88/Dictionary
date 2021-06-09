@@ -1,15 +1,7 @@
-/*						 *\
-   Assignment 2, CSP2104
-   Semester 1, 2021
-   Written by Ben Moon
-   Student ID: 10445994 
-\*						 */
-
 #include "Dictionary_Part02.h"
 using namespace std;
 
-/* Basic Task 1
-	List all words that are Nouns and Verbs */
+/* 	List all words that are Nouns and Verbs */
 void Dictionary2::isNounVerb()
 {
 	int n = 1;
@@ -26,8 +18,7 @@ void Dictionary2::isNounVerb()
 		cout << ">> No words in the dictionary are Nouns and Verbs" << endl;
 }
 
-/* Basic Task 2
-	List all words that are palindromes (same word backwards as forwards) */
+/* List all words that are palindromes (same word backwards as forwards) */
 void Dictionary2::palindrome()
 {
 	int n = 1;
@@ -46,8 +37,7 @@ void Dictionary2::palindrome()
 		cout << ">> No words in the dictionary are Palindromes (same word forwards and in reverse)" << endl;
 }
 
-/* Intermediate Task 1
-	List all words that are anagrams of the users input */
+/* 	List all words that are anagrams of the users input */
 void Dictionary2::anagram(string keyword)
 {
 	int n = 1;
@@ -69,41 +59,47 @@ void Dictionary2::anagram(string keyword)
 		cout << ">> No additional words found" << endl;
 }
 
-/* Intermediate Task 2
-	Find a random word that is a Noun
+/* 	Find a random word that is a Noun
 		-- have user guess that word */
 void Dictionary2::guessingGame()
 {
-	heading();
+	vector<string> word;
+	vector<string> def;
 	int guess = 1, score = 0;
-	string secretWord, guessWord, showDef;
-	cout << "\t\t\t == Guessing Game! ==\n" << endl;
+	string choice, secretWord, guessWord, showDef;
+
+	for (Word* i : dictionary)	
+	{	// Find all nouns, improved time complexity.
+		if (i->getType() == "Noun (n.)\n")	{
+			word.push_back(i->getWord());
+			def.push_back(i->getDefinition());
+		}
+	}
+
+	guessingGameHeading();
 	cout << "Rules:" << endl;
 	cout << "- 3 Guesses per attempt." << endl;
 	cout << "- Less then 5 letters: 1 Point" << endl;
 	cout << "- Less then 10 letters: 3 Points" << endl;
 	cout << "- More then 10 letters: 5 Points" << endl << endl;
+	
 
 	/* Find a word to be guessed
 		- word must be a Noun */
 	while (true) {
-		while (true)
-		{
-			default_random_engine generate(time(NULL));
-			uniform_int_distribution<int> random(0, wordCount());
-			int randNum = random(generate);
-			if (dictionary[randNum]->getType() == "Noun (n.)\n")
-			{
-				secretWord = dictionary[randNum]->getWord();
-				showDef = dictionary[randNum]->getDefinition();
-				break;
-			}
-		}
+		default_random_engine generate(time(NULL));
+		uniform_int_distribution<int> random(0, word.size());
+		int randNum = random(generate);
+
+		secretWord = word[randNum];
+		showDef = def[randNum];
+
+		guessingGameHeading();
 		cout << "Take your guess at a word to the below definition(s):\n\n>> " << showDef << endl << endl;
 		cout << "The word is <" << secretWord.length() << "> letters long.";
 
 		while (true)
-		{
+		{	// Time to play!
 			cout << "\n >> ";	cin >> guessWord;
 			if (lowerCase(guessWord) == "easteregg")
 			{
@@ -116,10 +112,11 @@ void Dictionary2::guessingGame()
 				if (secretWord.length() >= 5 and secretWord.length() <= 10)
 					score += 3;
 				else score += 5;
-				heading();
+				guessingGameHeading();
 				cout << "Congratulations! The word was: " << secretWord << endl;
 				cout << "Your current score is: " << score << endl << endl;
 				guess = 1;
+				system("pause");
 				break;
 			}
 			else if (guess == 1)
@@ -144,14 +141,29 @@ void Dictionary2::guessingGame()
 			}
 			else if (guess == 3)
 			{
-				cout << "Out of tries, better luck next time" << endl;
-				cout << "The word was: " << secretWord << endl;
-				cout << "Your score was: " << score << endl;
+				break;
+			}
+		}
+		// End of game, continue?
+		if (guess == 3) {
+			guessingGameHeading();
+			cout << "Out of tries, better luck next time" << endl;
+			cout << "The word was: " << secretWord << endl;
+			cout << "Your score was: " << score << endl << endl;
+			cout << "Continue Playing? Y/N \n >> ";
+			cin >> choice;
+			if (lowerCase(choice) == "y")
+			{
+				system("cls");
+				guess = 1;
+				continue;
+			}
+			else {
+				word.clear(); def.clear();
+				cout << "Thank you for playing the guessing game" << endl;
 				system("pause");
 				break;
 			}
 		}
-		if (guess == 3)
-			break;
 	}
 }

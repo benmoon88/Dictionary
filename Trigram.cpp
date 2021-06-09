@@ -1,10 +1,3 @@
-/*						 *\
-   Assignment 2, CSP2104
-   Semester 1, 2021
-   Written by Ben Moon
-   Student ID: 10445994
-\*						 */
-
 #include "Trigram.h"
 using namespace std;
 
@@ -185,19 +178,18 @@ int Trigram::topThreeCharacters(int index1, int index2, bool print)
 	}
 	if (print == false)
 	{
-		int top3[3] = { letterIndex1, letterIndex2, letterIndex3 };
-		int ranInt = randomNum(1, 10); // weight the results in highest probabilities favour
-		if (ranInt >= 4)
+		int ranInt = randomNum(1, 100); // weight the results in highest probabilities favour
+		if (ranInt >= 40)
 		{	// 60%
-			result = top3[0];
+			result = letterIndex1;
 		}
-		else if (ranInt >= 1)
-		{	// 30%
-			result = top3[1];
+		else if (ranInt >= 15)
+		{	// 25%
+			result = letterIndex2;
 		}
 		else
-		{	// 10%
-			result = top3[2];
+		{	// 15%
+			result = letterIndex3;
 		}
 		return result;
 	}
@@ -245,7 +237,7 @@ void Trigram::generateWords(string input)
 		while (word.length() <= 5)
 		{
 			letter1 = letter2;
-			letter2 = letter3;
+			letter2 = letter3; 
 
 			top3 = topThreeCharacters(letter1, letter2, false);
 			if (n = 10 and top3 == 0) // this prevents infinite loops from poor sample sized
@@ -291,7 +283,7 @@ void Trigram::funWithTrigrams()
 	string selection, input, currentFile;
 	while (true)
 	{
-		heading();
+		trigramHeading();
 		cout << "Pick a text file to load:" << endl;
 		cout << " 1. Load: 'dictionary2021.txt'" << endl;
 		cout << " 2. Load: 'SherlockHolmes.txt'" << endl;
@@ -307,7 +299,7 @@ void Trigram::funWithTrigrams()
 			}
 			else
 			{
-				heading();
+				trigramHeading();
 				loadTrigrams("dictionary2021.txt");
 				currentFile = "dictionary2021.txt";
 				system("pause");
@@ -322,7 +314,7 @@ void Trigram::funWithTrigrams()
 			}
 			else
 			{
-				heading();
+				trigramHeading();
 				loadTrigrams("SherlockHolmes.txt");
 				currentFile = "SherlockHolmes.txt";
 				system("pause");
@@ -339,7 +331,7 @@ void Trigram::funWithTrigrams()
 			}
 			else
 			{
-				heading();
+				trigramHeading();
 				loadTrigrams(input);
 				currentFile = input;
 				system("pause");
@@ -353,8 +345,7 @@ void Trigram::funWithTrigrams()
 		}
 		while (true)
 		{
-			heading();
-			cout << "\t\t\t == Fun with Trigrams! ==" << endl;
+			trigramHeading();
 			cout << " <" << currentFile << ">" << endl;
 			cout << "  " << getTotal() << " trigrams" << endl << endl;
 			cout << " 1. Generate ten random words" << endl;
