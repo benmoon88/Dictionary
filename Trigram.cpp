@@ -61,12 +61,15 @@ int Trigram::randomNum(int min, int max)
 bool Trigram::fileChecker(string input)
 {
 	ifstream file(input);
-	if (file.is_open())
+	if (file.is_open()) {
+		file.close();
 		return true;
-	else
+	}
+	else {
 		cout << "ERROR: File not found" << endl;
-	file.close();
-	return false;
+		file.close();
+		return false;
+	}
 }
 
 // Sets the total trigrams that are counted in a single parse
